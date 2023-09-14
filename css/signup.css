@@ -1,0 +1,380 @@
+/* Global */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
+:root {
+  --main-color: #0047ff;
+  --hover-color: #487cff;
+}
+* {
+  font-family: "Poppins", sans-serif;
+}
+body {
+  padding: 0 20px;
+  margin: 0;
+}
+section {
+  width: 640px;
+}
+.container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+/* Left side of website */
+#left-side {
+  width: 45%;
+}
+.logo {
+  width: 35px;
+  margin: 17px 0 0px 28px;
+}
+.title-1 {
+  font-size: 50px;
+  text-transform: capitalize;
+  margin: 0;
+  text-align: center;
+}
+#left-side .caption {
+  font-size: 18px;
+  width: 320px;
+  font-weight: 500;
+  text-align: center;
+  margin: 10px auto 60px auto;
+}
+.checklist-image {
+  width: 300px;
+  height: auto;
+  margin-left: 80px;
+}
+/* Right side of website */
+#right-side {
+  width: 45%;
+}
+.title-2 {
+  font-size: 50px;
+  text-align: center;
+  margin: 0;
+}
+/* Sign in with social media accounts */
+.social-media {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: 33px 40px 15px;
+}
+/* google */
+.google,
+.facebook {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  height: fit-content;
+  box-shadow: 0px 2px 2px #a6a6a6, 0px 0px 2px #a6a6a6;
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.google-photo {
+  width: 24px;
+  margin: 0px 16px 0px 0px;
+}
+.google .caption {
+  opacity: 75%;
+}
+/* Facebook */
+.facebook {
+  background-color: #1877f2;
+  color: #fff;
+}
+.fa-facebook {
+  font-size: 24px;
+  margin: 0px 16px 0px 0px;
+  color: white;
+}
+/* Or email section */
+.or-email {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  width: 100%;
+}
+/* line */
+.line {
+  width: 200px;
+  height: 3px;
+  background-color: #d9d9d9;
+  margin: 0 10px;
+}
+/* or email caption */
+.or-with-email {
+  font-weight: 500;
+  color: #656565;
+}
+/* Form */
+/* input field */
+.input-field {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+/* User name field */
+.username-label .caption {
+  margin: 0px 0px;
+  position: relative;
+  top: 10px;
+  left: 25px;
+  font-weight: 500;
+  background-color: #fff;
+  width: fit-content;
+  padding: 0px 7px;
+}
+.email-label .caption {
+  margin: 0px 0px;
+  position: relative;
+  top: 10px;
+  left: 25px;
+  font-weight: 500;
+  background-color: #fff;
+  width: fit-content;
+  padding: 0px 7px;
+}
+.password-label .caption {
+  margin: 0px 0px;
+  position: relative;
+  top: 10px;
+  left: 25px;
+  font-weight: 500;
+  background-color: #fff;
+  width: fit-content;
+  padding: 0px 7px;
+}
+#username,
+#email,
+#password {
+  width: 500px;
+  height: 50px;
+  border-radius: 20px;
+  border: none;
+  outline: 4px solid #d9d9d9;
+  font-size: 20px;
+  padding: 0 10px;
+  font-weight: 600;
+}
+#username:focus {
+  outline-color: var(--main-color);
+}
+#email:focus {
+  outline-color: var(--main-color);
+}
+#password:focus {
+  outline-color: var(--main-color);
+}
+.password-eye {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  margin-right: -25px;
+}
+.fa-eye,
+.fa-eye-slash {
+  position: relative;
+  right: 38px;
+  font-size: 24px;
+  cursor: pointer;
+}
+.error {
+  color: red;
+  font-weight: 600;
+  padding: 5px 0;
+  display: none;
+}
+/* Checklist label */
+.checklist-label {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  width: fit-content;
+  margin: 0 auto 0;
+}
+/* Hide the default checkbox */
+.container-2 input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.container-2 {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  font-size: 20px;
+  user-select: none;
+  width: fit-content;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 1.3em;
+  width: 1.3em;
+  background-color: #ccc;
+  border-radius: 25px;
+  transition: 0.15s;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: var(--main-color);
+  border-radius: 25px;
+  transition: 0.15s;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 0.45em;
+  top: 0.25em;
+  width: 0.25em;
+  height: 0.5em;
+  border: solid white;
+  border-width: 0 0.15em 0.15em 0;
+  transform: rotate(45deg);
+}
+/* remember-me */
+.checklist-label .remember {
+  margin: 0 225px 0px 5px;
+  font-weight: 500;
+}
+/* Forgot password */
+.forgot-password a {
+  text-decoration: none;
+  color: #0047ff;
+  font-weight: 500;
+}
+.forgot-password a:hover {
+  color: var(--hover-color);
+}
+/* sign up button */
+#sign-up {
+  margin-left: 100px;
+  width: 428px;
+  height: 69px;
+  border-radius: 15px;
+  background-color: var(--main-color);
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+#sign-up:hover {
+  background-color: var(--hover-color);
+  transition: 1000ms;
+  width: 400px;
+}
+/* For tablets */
+@media only screen and (max-width: 768px) {
+  .container {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+  }
+  header {
+    width: fit-content;
+    margin: 0;
+  }
+  #left-side,
+  #right-side {
+    width: 100%;
+  }
+  .logo {
+    width: 55px;
+  }
+  #left-side main {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin: 17px 0 0 0;
+  }
+  .title-1,
+  .title-2 {
+    font-size: 35px;
+  }
+  #left-side .caption {
+    font-size: 14px;
+    margin: 0;
+  }
+  .checklist-image {
+    width: 250px;
+  }
+  .social-media {
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+    margin: 10px auto;
+    width: fit-content;
+  }
+  .or-email {
+    justify-content: center;
+  }
+  .line {
+    width: 100px;
+  }
+  form {
+    width: fit-content;
+    margin: 0 auto;
+  }
+  #username,
+  #password,
+  #email {
+    width: 325px;
+  }
+  .checklist-label .remember {
+    margin: 0 40px 0px 5px;
+  }
+  #sign-up {
+    margin-left: 0;
+    width: 100%;
+    border-radius: 20px;
+  }
+  #sign-up:hover {
+    width: 300px;
+  }
+}
+/* for phones */
+@media only screen and (max-width: 375px) {
+  .logo {
+    width: 35px;
+  }
+  .line {
+    width: 80px;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .line {
+    width: 60px;
+  }
+  #username,
+  #password,
+  #email {
+    width: 100%;
+  }
+}

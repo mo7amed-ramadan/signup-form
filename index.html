@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/signup.css" />
+    <title>Sign up</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Left side of website-->
+      <section id="left-side">
+        <header>
+          <img src="assets/logo.png" alt="logo" class="logo" />
+        </header>
+        <main>
+          <h1 class="title-1">Gets your Tasks done</h1>
+          <p class="caption">
+            with To - Do lista it will help you to achieve your tasks with
+            highly productive tools and fast
+          </p>
+          <img
+            src="./assets/main-photo.svg"
+            alt="checklist"
+            class="checklist-image"
+          />
+        </main>
+      </section>
+      <!-- Right side of website -->
+      <section id="right-side">
+        <h1 class="title-2">Sign Up Now!!</h1>
+        <!-- Sign in with social media accounts -->
+        <div class="social-media">
+          <div class="google">
+            <img
+              src="assets/google.png"
+              alt="google photo"
+              class="google-photo"
+            />
+            <span class="caption">Sign up with Google</span>
+          </div>
+          <div class="facebook">
+            <i class="fab fa-facebook"></i>
+            <span class="caption">Sign up with Facebook</span>
+          </div>
+        </div>
+        <!-- Email side -->
+        <div class="or-email">
+          <div class="line"></div>
+          <p class="or-with-email">Or with email</p>
+          <div class="line"></div>
+        </div>
+        <form action="main.html" id="form">
+          <div class="input-field">
+            <!-- Username input -->
+            <label class="username-label">
+              <p class="caption">Username</p>
+              <input
+                type="text"
+                name="username"
+                id="username"
+                required
+                onblur="showError()"
+                onfocus="userBlue()"
+              />
+              <div class="error-username error" id="username-error">
+                The field is empty. please add something
+              </div>
+            </label>
+            <!-- Email input -->
+            <label class="email-label">
+              <p class="caption">email</p>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                required
+                onfocus="emailBlue()"
+                onblur="showError()"
+              />
+              <div class="error-email error" id="email-error">
+                The email is empty. please add right email
+              </div>
+            </label>
+            <!-- Password input -->
+            <label class="password-label">
+              <p class="caption">Password</p>
+              <div class="password-eye">
+                <input
+                  type="password"
+                  name="password"
+                  id="password"
+                  required
+                  onfocus="passwordBlue()"
+                  onblur="showError()"
+                />
+                <i class="far fa-eye" onclick="showHide()"></i>
+              </div>
+              <div class="error-password error" id="password-error">
+                The password is empty. please add right password
+              </div>
+              <div class="error-password error" id="password-less">
+                your password is less than 8 characters
+              </div>
+            </label>
+          </div>
+          <!-- checkbox -->
+          <label class="checklist-label">
+            <label class="container-2">
+              <input type="checkbox" id="checkbox" />
+              <div class="checkmark"></div>
+            </label>
+            <p class="caption remember">Remember me</p>
+            <p class="caption forgot-password">
+              <a href="#">Forgot Password?</a>
+            </p>
+          </label>
+          <!-- Sign up button -->
+          <input type="submit" value="Sign Up" id="sign-up" />
+        </form>
+        <!-- End of the form -->
+      </section>
+    </div>
+    <script src="js/signup.js"></script>
+    <script src="js/cookies.js"></script>
+  </body>
+</html>
